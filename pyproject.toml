@@ -5,7 +5,7 @@ description = "GPT Researcher is an autonomous agent designed for comprehensive 
 authors = ["Assaf Elovic <assaf.elovic@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-include = ["cli.py"]
+
 
 [tool.poetry.dependencies]
 python = ">=3.11, <4"
@@ -57,7 +57,7 @@ python_files = "test_*.py"
 asyncio_fixture_loop_scope = "function"
 
 [tool.poetry.scripts]
-gpt-researcher = "cli:entrypoint"
+gpt-researcher = "gpt_researcher.cli:entrypoint"
 
 [tool.uv.sources]
 gpt-researcher = { workspace = true }
@@ -237,7 +237,7 @@ requirements-txt = [
 ]
 
 [project.scripts]
-gpt-researcher = "cli:entrypoint"
+gpt-researcher = "gpt_researcher.cli:entrypoint"
 
 [dependency-groups]
 dev = [

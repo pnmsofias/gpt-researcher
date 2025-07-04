@@ -23,7 +23,7 @@ This command-line interface (CLI) tool allows you to generate research reports u
 The basic syntax for using the CLI is:
 
 ```
-python cli.py "<query>" --report_type <report_type> [--tone <tone>]
+python -m gpt_researcher.cli "<query>" --report_type <report_type> [--tone <tone>]
 ```
 
 ### Arguments
@@ -57,17 +57,17 @@ python cli.py "<query>" --report_type <report_type> [--tone <tone>]
 
 1. Generate a quick research report on climate change:
    ```
-   python cli.py "What are the main causes of climate change?" --report_type research_report
+   python -m gpt_researcher.cli "What are the main causes of climate change?" --report_type research_report
    ```
 
 2. Create a detailed report on artificial intelligence with an analytical tone:
    ```
-   python cli.py "The impact of artificial intelligence on job markets" --report_type detailed_report --tone analytical
+   python -m gpt_researcher.cli "The impact of artificial intelligence on job markets" --report_type detailed_report --tone analytical
    ```
 
 3. Generate an outline report on renewable energy with a persuasive tone:
    ```
-   python cli.py "Renewable energy sources and their potential" --report_type outline_report --tone persuasive
+   python -m gpt_researcher.cli "Renewable energy sources and their potential" --report_type outline_report --tone persuasive
    ```
 
 ## Output

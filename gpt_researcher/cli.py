@@ -4,7 +4,7 @@ Provides a command line interface for the GPTResearcher class.
 Usage:
 
 ```shell
-python cli.py "<query>" --report_type <report_type> --tone <tone> --query_domains <foo.com,bar.com>
+python -m gpt_researcher.cli "<query>" --report_type <report_type> --tone <tone> --query_domains <foo.com,bar.com>
 ```
 
 """
