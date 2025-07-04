@@ -161,7 +161,12 @@ async def main(args):
 
     print(f"Report written to '{artifact_filepath}'")
 
-if __name__ == "__main__":
+def entrypoint() -> None:
+    """Console script entry point used by ``gpt-researcher``."""
     load_dotenv()
     args = cli.parse_args()
     asyncio.run(main(args))
+
+
+if __name__ == "__main__":
+    entrypoint()

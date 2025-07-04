@@ -55,6 +55,12 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 asyncio_fixture_loop_scope = "function"
 
+[tool.poetry.scripts]
+gpt-researcher = "cli:entrypoint"
+
+[tool.poetry.include]
+files = ["cli.py"]
+
 [tool.uv.sources]
 gpt-researcher = { workspace = true }
 
@@ -231,6 +237,9 @@ requirements-txt = [
     "scrapy",
     "selenium",
 ]
+
+[project.scripts]
+gpt-researcher = "cli:entrypoint"
 
 [dependency-groups]
 dev = [

@@ -113,6 +113,15 @@ For other setups (e.g., Poetry or virtual environments), check the [Getting Star
 pip install gpt-researcher
 
 ```
+
+### Ejecutar con ``uv``
+
+Instala el repositorio directamente y ejecuta el comando con ``uvx``:
+
+```bash
+uv tool install git+https://github.com/pnmsofias/gpt-researcher
+uvx --from gpt-researcher gpt-researcher "¿Cuántas copas de Europa ha ganado el Barcelona?" --report_type detailed_report
+```
 ### Example Usage:
 ```python
 ...
