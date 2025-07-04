@@ -42,6 +42,11 @@ setup(
     ],
     python_requires='>=3.11',
     install_requires=reqs,
+    entry_points={
+        "console_scripts": [
+            "gpt-researcher=gpt_researcher.cli:entrypoint",
+        ]
+    },
 
 
 )
