@@ -4,8 +4,8 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from langchain.output_parsers import PydanticOutputParser
-from langchain.prompts import PromptTemplate
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.prompts import PromptTemplate
 
 from gpt_researcher.llm_provider.generic.base import NO_SUPPORT_TEMPERATURE_MODELS, SUPPORT_REASONING_EFFORT_MODELS, ReasoningEfforts
 
@@ -54,7 +54,7 @@ async def create_chat_completion(
         raise ValueError("Model cannot be None")
     if max_tokens is not None and max_tokens > 32001:
         raise ValueError(
-            f"Max tokens cannot be more than 16,000, but got {max_tokens}")
+            f"Max tokens cannot be more than 32,000, but got {max_tokens}")
 
     # Get the provider from supported providers
     provider_kwargs = {'model': model}
@@ -144,7 +144,7 @@ async def construct_subtopics(
 
         chain = prompt | model | parser
 
-        output = chain.invoke({
+        output = await chain.ainvoke({
             "task": task,
             "data": data,
             "subtopics": subtopics,
@@ -155,4 +155,5 @@ async def construct_subtopics(
 
     except Exception as e:
         print("Exception in parsing subtopics : ", e)
+        logging.getLogger(__name__).error("Exception in parsing subtopics : \n {e}")
         return subtopics

@@ -6,7 +6,8 @@
 
 [![Website](https://img.shields.io/badge/Official%20Website-gptr.dev-teal?style=for-the-badge&logo=world&logoColor=white&color=0891b2)](https://gptr.dev)
 [![Documentation](https://img.shields.io/badge/Documentation-DOCS-f472b6?logo=googledocs&logoColor=white&style=for-the-badge)](https://docs.gptr.dev)
-[![Discord Follow](https://dcbadge.vercel.app/api/server/QgZXvJAccX?style=for-the-badge&theme=clean-inverted&?compact=true)](https://discord.gg/QgZXvJAccX)
+[![Discord](https://img.shields.io/discord/1127851779011391548?logo=discord&logoColor=white&label=Discord&color=34b76a&style=for-the-badge)](https://discord.gg/QgZXvJAccX)
+
 
 [![PyPI version](https://img.shields.io/pypi/v/gpt-researcher?logo=pypi&logoColor=white&style=flat)](https://badge.fury.io/py/gpt-researcher)
 ![GitHub Release](https://img.shields.io/github/v/release/assafelovic/gpt-researcher?style=flat&logo=github)
@@ -35,8 +36,9 @@ The agent produces detailed, factual, and unbiased research reports with citatio
 - Selective web sources can introduce bias into research tasks.
 
 ## Demo
-https://github.com/user-attachments/assets/8fcaaa4c-31e5-4814-89b4-94f1433d139d
-
+<a href="https://www.youtube.com/watch?v=f60rlc_QCxE" target="_blank" rel="noopener">
+  <img src="https://github.com/user-attachments/assets/ac2ec55f-b487-4b3f-ae6f-b8743ad296e4" alt="Demo video" width="800" target="_blank" />
+</a>
 
 
 ## Architecture
@@ -72,7 +74,7 @@ Steps:
 
 ## 📖 Documentation
 
-See the [Documentation](https://docs.gptr.dev/docs/gpt-researcher/getting-started/getting-started) for:
+See the [Documentation](https://docs.gptr.dev/docs/gpt-researcher/getting-started) for:
 - Installation and setup guides
 - Configuration and customization options
 - How-To examples
@@ -97,6 +99,12 @@ See the [Documentation](https://docs.gptr.dev/docs/gpt-researcher/getting-starte
     export TAVILY_API_KEY={Your Tavily API Key here}
     ```
 
+    For custom OpenAI-compatible APIs (e.g., local models, other providers), you can also set:
+    
+    ```bash
+    export OPENAI_BASE_URL={Your custom API base URL here}
+    ```
+
 4. Install dependencies and start the server:
 
     ```bash
@@ -106,7 +114,7 @@ See the [Documentation](https://docs.gptr.dev/docs/gpt-researcher/getting-starte
 
 Visit [http://localhost:8000](http://localhost:8000) to start.
 
-For other setups (e.g., Poetry or virtual environments), check the [Getting Started page](https://docs.gptr.dev/docs/gpt-researcher/getting-started/getting-started).
+For other setups (e.g., Poetry or virtual environments), check the [Getting Started page](https://docs.gptr.dev/docs/gpt-researcher/getting-started).
 
 ## Run as PIP package
 ```bash
